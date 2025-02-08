@@ -6,12 +6,10 @@ namespace BackToBasicsC_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("How many cans of meat would you like to order:");
-            string cansOrderedAsText = Console.ReadLine();
-            int cansOrdered = Int32.Parse(cansOrderedAsText);
-            Console.WriteLine(cansOrdered);
-            Console.ReadLine();
+            Point pointOne = new Point(10, 10);
+            Console.WriteLine("Distance to the point is: " + pointOne.DistanceTo(5, 5));
 
+            Console.ReadLine();
         }
     }
 }
