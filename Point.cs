@@ -18,5 +18,9 @@ namespace BackToBasicsC_
             int yDiff = Y - y;
             return (int)Math.Sqrt(Math.Pow(xDiff, 2) + Math.Pow(yDiff, 2));
         }
+        public int DistanceTo(Point point)
+        {
+            return DistanceTo(point.X, point.Y);
+        }
     }
 }
