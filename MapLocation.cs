@@ -11,5 +11,10 @@ namespace BackToBasicsC_
                 throw new Exception();
             }
         }
+
+        public bool InRangOf(MapLocation location, int range)
+        {
+            return DistanceTo(location) <= range;
+        }
     }
 }
