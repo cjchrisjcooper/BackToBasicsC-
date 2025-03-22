@@ -23,6 +23,26 @@ namespace BackToBasicsC_
                     }
                     );
 
+                Invader[] invaders =
+                {
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path),
+                };
+                Tower[] towers =
+                {
+                    new Tower(new MapLocation(1, 2, map)),
+                    new Tower(new MapLocation(3, 2, map)),
+                    new Tower(new MapLocation(5, 2, map)),
+                };
+                Level level = new Level(invaders)
+                {
+                    Towers = towers
+                };
+                bool playerWon = level.Play();
+
+                Console.WriteLine("Player has " + (playerWon ? "Won" : "Lost"));
+
                 MapLocation thirdLocation = path.getLocationAt(2);
                 Console.WriteLine(thirdLocation.X + "," + thirdLocation.Y);
                 Console.ReadLine();
